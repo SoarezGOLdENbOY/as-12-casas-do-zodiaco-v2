@@ -1,0 +1,55 @@
+<!--
+    By Leandromeda =)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavaleiros de Ouro: As 12 Casas!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <p>Digte o signo desejado:
+        <input type="text" placeholder="Inforne um texto" id="valor">
+        <button onclick="MudaDesenho()">Elevar Cosmo!</button><p>
+
+    <h1></h1>
+    <img src="img/signos.jpg">
+
+
+    <script>
+        function MudaDesenho(){
+            const texto = document.querySelector("h1");
+            const imagem = document.querySelector("img");
+            const valor = document.querySelector('#valor').value;
+            
+            if(valor=="gemeos"){
+                texto.innerHTML = "Gêmeos";
+                imagem.setAttribute("src","img/gemeos.png");
+                imagem.setAttribute("width","300px");
+            }
+
+            else if(valor=="escorpiao"){
+                texto.innerHTML = "Escorpião";
+                imagem.setAttribute("src","img/escorpiao.png");
+                imagem.setAttribute("width","300px");
+            }
+            
+            else if(valor=="peixes"){
+                texto.innerHTML = "Peixes";
+                imagem.setAttribute("src","img/peixes.png");
+                imagem.setAttribute("width","300px");
+            }
+            else{
+                texto.innerHTML = "Cavaleiro não encontrado... =(";
+                imagem.setAttribute("src","img/x.webp");
+                imagem.setAttribute("width","250px");
+            }
+        }
+    </script>
+</body>
+</html>
